@@ -9,6 +9,11 @@ end
 
 def max_2_sum(arr)
   # YOUR CODE HERE
+  return 0 if arr.empty?
+  return arr[0] if arr.length == 1
+  
+  largest_two = arr.max(2)
+  largest_two.sum
 end
 
 def sum_to_n?(arr, number)
