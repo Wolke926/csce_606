@@ -18,6 +18,17 @@ end
 
 def sum_to_n?(arr, number)
   # YOUR CODE HERE
+  return false if arr.length < 2
+  
+  a = Set.new
+  
+  arr.each do |num|
+    return true if a.include?(number - num)
+ 
+    a.add(num)
+  end
+  
+  false
 end
 
 # Part 2
