@@ -38,8 +38,12 @@ def hello(name)
   "Hello, #{name}"
 end
 
+require 'set'
+
 def starts_with_consonant?(string)
-  # YOUR CODE HERE
+  vowels = Set.new(['a', 'e', 'i', 'o', 'u', 'A', 'E', 'I', 'O', 'U'])
+  return false if string.empty? || !string[0].match?(/[a-zA-Z]/)
+  !vowels.include?(string[0])
 end
 
 def binary_multiple_of_4?(string)
