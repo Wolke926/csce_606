@@ -46,7 +46,8 @@ def starts_with_consonant?(string)
   !vowels.include?(string[0])
 end
 
-def binary_multiple_of_4?(string)
+def binary_multiple_of_4?(s)
+  s.match?(/\A[01]+\z/) && s.to_i(2) % 4 == 0
   # YOUR CODE HERE
 end
 
